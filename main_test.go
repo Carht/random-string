@@ -16,9 +16,9 @@ func TestGetARandomIndexFromAString(t *testing.T) {
 
 func TestGetARandomElementFromAString(t *testing.T) {
 	input := "abcdefghijklmnopqrstuvwxyz"
-	result := getRandomCharacter(input)
 
 	for range input {
+		result := getRandomCharacter(input)
 		char := isMember(result, input)
 
 		if char != true {
