@@ -27,3 +27,14 @@ func TestGetARandomElementFromAString(t *testing.T) {
 	}
 }
 
+func TestGenerateRandomStringOfSomeLength(t *testing.T) {
+	abcLower := "abcdefghijklmnopqrstuvwxyz"
+
+	for i := range abcLower {
+		result := genRandStr(abcLower, i)
+
+		if len(result) != i {
+			t.Errorf("The expected value is %d, but the answer was %d", i, len(result))
+		}
+	}
+}

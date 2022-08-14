@@ -15,3 +15,13 @@ func getRandomCharacter(s string) string {
 	randomChar := string(s[randomIndex])
 	return randomChar
 }
+
+func genRandStr(s string, lenStr int) string {
+	outputStr := ""
+	
+	for i := 0; i < lenStr; i++ {
+		outputStr = outputStr + getRandomCharacter(s)
+	}
+
+	return outputStr
+}
