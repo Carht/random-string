@@ -17,6 +17,11 @@ func getRandomCharacter(s string) string {
 }
 
 func genRandStr(s string, lenStr int) string {
+
+	if s == "" {
+		return ""
+	}
+	
 	outputStr := ""
 	
 	for i := 0; i < lenStr; i++ {
