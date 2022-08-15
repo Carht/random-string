@@ -17,8 +17,8 @@ Return a string using the input number
 ./randomstring 22
 OWrslUCVNBFlylp4StQOxa
 
-./randomstring 25
-ZDLqb11q5cJYIqYmITxnU6akoEyaJ8bsKItgCKCX83krLYFcfNZwFB0dwZj95udo8UOCXt9cJR8D7DldarH1ZuSgrBQHVmdqR708hvkiD4dGbBtGkCDV9t06m869VsGaaCbdKZraMJA0kUS4GDVGrlai2vLFGPaEuzNAZ1kJH9GZj1b929ugPQPXhwRGksfqthcu2tIayjoYtr0HnuwWr4rEhA5LZDxgfNEJzKe9AJku9NIeEgA9O3sWV8TYIySm
+./randomstring 50
+3zlmiyPmueMIi306FY2sEAHAfJVgFPOsVq69V6FSLosLsDQAYk
 ```
 
 ## Help
