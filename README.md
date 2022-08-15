@@ -29,14 +29,14 @@ If you use the argument **-h** or **help** return this:
 ./randomstring -h
 randomstring [Argument]
                   
-                  randomstring:
-                    Without arguments return a string of 32 characters between uppercases, lowercases and numbers.
+randomstring:
+  Without arguments return a string of 32 characters between uppercases, lowercases and numbers.
                   
-                  randomstring version | randomstring -v:
-                    Return the version of this example.
+randomstring version | randomstring -v:
+  Return the version of this example.
 
-                  randomstring help | randomstring -h:
-                    Return this help.
+randomstring help | randomstring -h:
+  Return this help.
 ```
 
 ## Version
