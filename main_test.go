@@ -18,7 +18,7 @@ func TestGetARandomElementFromAString(t *testing.T) {
 	input := "abcdefghijklmnopqrstuvwxyz"
 
 	for range input {
-		result := getRandomCharacter(input)
+		result := GetRandomCharacter(input)
 		char := isMember(result, input)
 
 		if char != true {
@@ -31,7 +31,7 @@ func TestGenerateRandomStringOfSomeLength(t *testing.T) {
 	abcLower := "abcdefghijklmnopqrstuvwxyz"
 
 	for i := range abcLower {
-		result := genRandStr(abcLower, i)
+		result := GenRandStr(abcLower, i)
 
 		if len(result) != i {
 			t.Errorf("The expected value is %d, but the answer was %d", i, len(result))
@@ -43,7 +43,7 @@ func TestVerifyIfTheInputLengthIsZero(t *testing.T) {
 	hi := "Hello Golang"
 	outputLenStr := 0
 
-	result := genRandStr(hi, outputLenStr)
+	result := GenRandStr(hi, outputLenStr)
 	expected := ""
 
 	if result != expected {
@@ -56,7 +56,7 @@ func TestVerifyIfTheInputLenIsNegative(t *testing.T) {
 	outputLenStr := []int{-1, -2, -3, -5, -10, -50, -100, -1000, -1234, -9999}
 
 	for i := range outputLenStr {
-		result := genRandStr(hi, outputLenStr[i])
+		result := GenRandStr(hi, outputLenStr[i])
 		expected := ""
 
 		if result != expected {
@@ -65,13 +65,12 @@ func TestVerifyIfTheInputLenIsNegative(t *testing.T) {
 	}
 }
 
-
 func TestVerifyEmptyStringAndZeroAndNegativeLenOutputStr(t *testing.T) {
 	hi := ""
 	outputLenStr := []int{0, -1, -2, -3, -4, -5, -7, -11, -20, -50, -32, -64, -256}
 
 	for i := range outputLenStr {
-		result := genRandStr(hi, outputLenStr[i])
+		result := GenRandStr(hi, outputLenStr[i])
 		expected := ""
 
 		if result != expected {
@@ -85,7 +84,7 @@ func TestVerifyEmptyStringAndPositiveLenOutputStr(t *testing.T) {
 	outputLenStr := []int{1, 2, 3, 4, 5, 7, 11, 20, 50, 32, 64, 256, 9999}
 
 	for i := range outputLenStr {
-		result := genRandStr(hi, outputLenStr[i])
+		result := GenRandStr(hi, outputLenStr[i])
 		expected := ""
 
 		if result != expected {
