@@ -66,4 +66,16 @@ func TestVerifyIfTheInputLenIsNegative(t *testing.T) {
 }
 
 
+func TestVerifyEmptyStringAndZeroAndNegativeLenOutputStr(t *testing.T) {
+	hi := ""
+	outputLenStr := []int{0, -1, -2, -3, -4, -5, -7, -11, -20, -50, -32, -64, -256}
 
+	for i := range outputLenStr {
+		result := genRandStr(hi, outputLenStr[i])
+		expected := ""
+
+		if result != expected {
+			t.Errorf("The expected value is %s, but the answer was %s", expected, result)
+		}
+	}
+}
