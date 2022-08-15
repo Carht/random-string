@@ -1,3 +1,3 @@
-module github.com/carht/random-string
+module github.com/carht/randomstring
 
 go 1.18
