@@ -1,4 +1,4 @@
-package main
+package randomstring
 
 func isMember(c, s string) bool {
 	output := false
