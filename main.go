@@ -1,8 +1,8 @@
 package main
 
 import (
-	"time"
 	"math/rand"
+	"time"
 )
 
 func randIndex(s string) int {
@@ -10,22 +10,22 @@ func randIndex(s string) int {
 	return rand.Intn(len(s))
 }
 
-func getRandomCharacter(s string) string {
+func GetRandomCharacter(s string) string {
 	randomIndex := randIndex(s)
 	randomChar := string(s[randomIndex])
 	return randomChar
 }
 
-func genRandStr(s string, lenStr int) string {
+func GenRandStr(s string, lenStr int) string {
 
 	if s == "" {
 		return ""
 	}
-	
+
 	outputStr := ""
-	
+
 	for i := 0; i < lenStr; i++ {
-		outputStr = outputStr + getRandomCharacter(s)
+		outputStr = outputStr + GetRandomCharacter(s)
 	}
 
 	return outputStr
