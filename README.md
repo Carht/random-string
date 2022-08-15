@@ -1,5 +1,5 @@
 # random string
-Generate a random string
+A golang library for generate a random string. Util for unix-like shell scripting.
 
 # Usage
 
