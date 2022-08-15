@@ -38,3 +38,32 @@ func TestGenerateRandomStringOfSomeLength(t *testing.T) {
 		}
 	}
 }
+
+func TestVerifyIfTheInputLengthIsZero(t *testing.T) {
+	hi := "Hello Golang"
+	outputLenStr := 0
+
+	result := genRandStr(hi, outputLenStr)
+	expected := ""
+
+	if result != expected {
+		t.Errorf("The expected value is %s, but the answer was %s", expected, result)
+	}
+}
+
+func TestVerifyIfTheInputLenIsNegative(t *testing.T) {
+	hi := "hello Golang"
+	outputLenStr := []int{-1, -2, -3, -5, -10, -50, -100, -1000, -1234, -9999}
+
+	for i := range outputLenStr {
+		result := genRandStr(hi, outputLenStr[i])
+		expected := ""
+
+		if result != expected {
+			t.Errorf("The expected value is %s, but the answer was %s", expected, result)
+		}
+	}
+}
+
+
+
