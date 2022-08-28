@@ -31,9 +31,14 @@ func usage() {
 
 func main() {
 	abc := "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+	//uABC := "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	//labc := "abcdefghijklmnopqrstuvwxyz"
+	nums := "0123456789"
+	
 
 	if len(os.Args) > 1 {
 		arg := os.Args[1]
+		arg2 := os.Args[2]
 
 		switch arg {
 		case "version":
@@ -44,6 +49,13 @@ func main() {
 			usage()
 		case "-h":
 			usage()
+		case "-n":
+			inputLenStr, err := strconv.Atoi(arg2)
+			if err != nil {
+				log.Fatal(err)
+			}
+			randStr := randomstring.GenRandStr(nums, inputLenStr)
+			fmt.Println(randStr)
 		default:
 			inputLenStr, err := strconv.Atoi(arg)
 			if err != nil {
