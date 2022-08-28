@@ -30,7 +30,6 @@ func usage() {
 
 
 func main() {
-	abc := "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 	uABC := "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 	labc := "abcdefghijklmnopqrstuvwxyz"
 	nums := "0123456789"
@@ -93,11 +92,11 @@ func main() {
 				log.Fatal(err)
 			}
 
-			randStr := randomstring.GenRandStr(abc, inputLenStr)
+			randStr := randomstring.GenRandStr(labc+uABC, inputLenStr)
 			fmt.Println(randStr)
 		}
 	} else {
-		randStr := randomstring.GenRandStr(abc, 32)
+		randStr := randomstring.GenRandStr(nums+labc+uABC, 32)
 		fmt.Println(randStr)
 	}
 }
