@@ -32,7 +32,7 @@ func usage() {
 func main() {
 	abc := "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 	//uABC := "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-	//labc := "abcdefghijklmnopqrstuvwxyz"
+	labc := "abcdefghijklmnopqrstuvwxyz"
 	nums := "0123456789"
 	
 
@@ -55,6 +55,13 @@ func main() {
 				log.Fatal(err)
 			}
 			randStr := randomstring.GenRandStr(nums, inputLenStr)
+			fmt.Println(randStr)
+		case "-l":
+			inputLenStr, err := strconv.Atoi(arg2)
+			if err != nil {
+				log.Fatal(err)
+			}
+			randStr := randomstring.GenRandStr(labc, inputLenStr)
 			fmt.Println(randStr)
 		default:
 			inputLenStr, err := strconv.Atoi(arg)
