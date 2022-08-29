@@ -1,12 +1,12 @@
 # random string
-A golang library for generate a random string. Util for unix-like shell scripting.
+A golang library for generate a random string lowercases, string uppercase and numbers. Util for unix-like shell scripting.
 
 # Usage
 
 Return a string of 32 characters.
 
 ```bash
-./randomstring
+./randstr
 zEbNgSn1oOed7HsuzL2cl4TjPXv20mI3
 ```
 
@@ -14,10 +14,10 @@ zEbNgSn1oOed7HsuzL2cl4TjPXv20mI3
 Return a string using the input number
 
 ```bash
-./randomstring 22
+./randstr 22
 OWrslUCVNBFlylp4StQOxa
 
-./randomstring 50
+./randstr 50
 3zlmiyPmueMIi306FY2sEAHAfJVgFPOsVq69V6FSLosLsDQAYk
 ```
 
@@ -26,17 +26,32 @@ OWrslUCVNBFlylp4StQOxa
 If you use the argument **-h** or **help** return this:
 
 ```bash
-./randomstring -h
-randomstring [Argument]
-                  
-randomstring:
-  Without arguments return a string of 32 characters between uppercases, lowercases and numbers.
-                  
-randomstring version | randomstring -v:
-  Return the version of this example.
-
-randomstring help | randomstring -h:
-  Return this help.
+randstr [Argument]
+                 
+        -h or help    : Return this help.
+        -v or version : Return the version. 
+        -n            : Return numbers.
+        -l            : Return lowercase letters.
+        -u            : Return uppercase letters.
+        -nl or -ln    : Return lowercase letters with numbers.
+        -un or -nu    : Return uppercase letters with numbers.
+        -ul or -lu    : Return uppercase letters with lowercase letters.
+        default       : Return a string of 32 characters between uppercases, lowercases and numbers.
+        Note: All previous parameters can use a number for the output length.
+        Some examples:
+        
+        $ randstr
+        cDUKhgpkuIgMdqs3JibEjJoyBiBjgjZi
+        
+        $ randstr 35
+        ghrzAtgElMIMxCRFMFCbUCnwiDuEkejKocQ
+        $ randstr -n
+        54770780734477138272862081928945
+     
+        $ randstr -n 33
+        280309865114201905814323059174146
+        $ randstr -nl 35
+        hs9wsuhr6m2dyez2zdfyxduglsccygtyzaq
 ```
 
 ## Version
@@ -44,16 +59,16 @@ randomstring help | randomstring -h:
 If you use the argument **-v** or **version** return this:
 
 ```bash
-./randomstring -v
-0.1.1
+./randstr -v
+0.1.2
 ```
 
 # Usage example
 
 ```bash
-mkdir $(randomstring)
-cp /home/user/file.xyz /home/user/$(randomstring 45)
-mv /home/user/file.xyz $(randomstring)
+mkdir $(randstr -l 27)
+cp /home/user/file.xyz /home/user/$(randstr -u 45)
+mv /home/user/file.xyz $(randstr -l)
 ```
 
 # License
