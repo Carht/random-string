@@ -112,6 +112,19 @@ func main() {
 				randStr := randomstring.GenRandStr(nums+uABC, inputLenStr)
 				fmt.Println(randStr)
 			}
+		case "-lu", "-ul":
+			if len(os.Args) == 2 {
+				randStr := randomstring.GenRandStr(labc+uABC, 32)
+				fmt.Println(randStr)
+			} else {
+				arg2 := os.Args[2]
+				inputLenStr, err := strconv.Atoi(arg2)
+				if err != nil {
+					log.Fatal(err)
+				}
+				randStr := randomstring.GenRandStr(labc+uABC, inputLenStr)
+				fmt.Println(randStr)
+			}
 		default:
 			inputLenStr, err := strconv.Atoi(arg)
 			if err != nil {
