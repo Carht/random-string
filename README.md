@@ -28,30 +28,34 @@ If you use the argument **-h** or **help** return this:
 ```bash
 randstr [Argument]
                  
-        -h or help    : Return this help.
-        -v or version : Return the version. 
-        -n            : Return numbers.
-        -l            : Return lowercase letters.
-        -u            : Return uppercase letters.
-        -nl or -ln    : Return lowercase letters with numbers.
-        -un or -nu    : Return uppercase letters with numbers.
-        -ul or -lu    : Return uppercase letters with lowercase letters.
-        default       : Return a string of 32 characters between uppercases, lowercases and numbers.
-        Note: All previous parameters can use a number for the output length.
-        Some examples:
+	-h or help    : Return this help.
+    -v or version : Return the version. 
+    -n            : Return numbers.
+    -l            : Return lowercase letters.
+    -u            : Return uppercase letters.
+    -nl or -ln    : Return lowercase letters with numbers.
+    -un or -nu    : Return uppercase letters with numbers.
+    -ul or -lu    : Return uppercase letters with lowercase letters.
+    default       : Return a string of 32 characters between uppercases, lowercases and numbers.
+    
+	Note: All previous parameters can use a number for the output length.
         
-        $ randstr
-        cDUKhgpkuIgMdqs3JibEjJoyBiBjgjZi
+	Some examples:
         
-        $ randstr 35
-        ghrzAtgElMIMxCRFMFCbUCnwiDuEkejKocQ
-        $ randstr -n
-        54770780734477138272862081928945
+    $ randstr
+    cDUKhgpkuIgMdqs3JibEjJoyBiBjgjZi
+        
+    $ randstr 35
+    ghrzAtgElMIMxCRFMFCbUCnwiDuEkejKocQ
+        
+	$ randstr -n
+    54770780734477138272862081928945
      
-        $ randstr -n 33
-        280309865114201905814323059174146
-        $ randstr -nl 35
-        hs9wsuhr6m2dyez2zdfyxduglsccygtyzaq
+    $ randstr -n 33
+    280309865114201905814323059174146
+        
+	$ randstr -nl 35
+    hs9wsuhr6m2dyez2zdfyxduglsccygtyzaq
 ```
 
 ## Version
