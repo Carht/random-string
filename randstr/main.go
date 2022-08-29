@@ -14,16 +14,37 @@ func version() {
 }
 
 func usage() {
-	usage := `randomstring [Argument]
-                  
-                  randomstring:
-                    Without arguments return a string of 32 characters between uppercases, lowercases and numbers.
-                  
-                  randomstring version | randomstring -v:
-                    Return the version of this example.
+	usage := `randstr [Argument]
+                 
+        -h or help    : Return this help.
+        -v or version : Return the version. 
+        -n            : Return numbers.
+        -l            : Return lowercase letters.
+        -u            : Return uppercase letters.
+        -nl or -ln    : Return lowercase letters with numbers.
+        -un or -nu    : Return uppercase letters with numbers.
+        -ul or -lu    : Return uppercase letters with lowercase letters.
+        default       : Return a string of 32 characters between uppercases, lowercases and numbers.
 
-                  randomstring help | randomstring -h:
-                    Return this help.`
+        Note: All previous parameters can use a number for the output length.
+
+        Some examples:
+        
+        $ randstr
+        cDUKhgpkuIgMdqs3JibEjJoyBiBjgjZi
+        
+        $ randstr 35
+        ghrzAtgElMIMxCRFMFCbUCnwiDuEkejKocQ
+
+        $ randstr -n
+        54770780734477138272862081928945
+     
+        $ randstr -n 33
+        280309865114201905814323059174146
+
+        $ randstr -nl 35
+        hs9wsuhr6m2dyez2zdfyxduglsccygtyzaq
+`
 
 	fmt.Println(usage)
 }
