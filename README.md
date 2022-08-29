@@ -25,10 +25,10 @@ OWrslUCVNBFlylp4StQOxa
 
 If you use the argument **-h** or **help** return this:
 
-```bash
+```
 randstr [Argument]
                  
-	-h or help    : Return this help.
+    -h or help    : Return this help.
     -v or version : Return the version. 
     -n            : Return numbers.
     -l            : Return lowercase letters.
@@ -38,9 +38,9 @@ randstr [Argument]
     -ul or -lu    : Return uppercase letters with lowercase letters.
     default       : Return a string of 32 characters between uppercases, lowercases and numbers.
     
-	Note: All previous parameters can use a number for the output length.
+    Note: All previous parameters can use a number for the output length.
         
-	Some examples:
+    Some examples:
         
     $ randstr
     cDUKhgpkuIgMdqs3JibEjJoyBiBjgjZi
@@ -48,13 +48,13 @@ randstr [Argument]
     $ randstr 35
     ghrzAtgElMIMxCRFMFCbUCnwiDuEkejKocQ
         
-	$ randstr -n
+    $ randstr -n
     54770780734477138272862081928945
      
     $ randstr -n 33
     280309865114201905814323059174146
         
-	$ randstr -nl 35
+    $ randstr -nl 35
     hs9wsuhr6m2dyez2zdfyxduglsccygtyzaq
 ```
 
