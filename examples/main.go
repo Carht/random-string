@@ -28,6 +28,21 @@ func usage() {
 	fmt.Println(usage)
 }
 
+func selectInput(s string) {
+	if len(os.Args) == 2 {
+		randStr := randomstring.GenRandStr(s, 32)
+		fmt.Println(randStr)
+	} else {
+		arg2 := os.Args[2]
+		inputLenStr, err := strconv.Atoi(arg2)
+		if err != nil {
+			log.Fatal(err)
+		}
+		randStr := randomstring.GenRandStr(s, inputLenStr)
+		fmt.Println(randStr)
+	}
+}
+
 
 func main() {
 	uABC := "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -48,83 +63,17 @@ func main() {
 		case "-h":
 			usage()
 		case "-n":
-			if len(os.Args) == 2 {
-				randStr := randomstring.GenRandStr(nums, 32)
-				fmt.Println(randStr)
-			} else {
-				arg2 := os.Args[2]
-				inputLenStr, err := strconv.Atoi(arg2)
-				if err != nil {
-					log.Fatal(err)
-				}
-				randStr := randomstring.GenRandStr(nums, inputLenStr)
-				fmt.Println(randStr)
-			}
+			selectInput(nums)
 		case "-l":
-			if len(os.Args) == 2 {
-				randStr := randomstring.GenRandStr(labc, 32)
-				fmt.Println(randStr)
-			} else {
-				arg2 := os.Args[2]
-				inputLenStr, err := strconv.Atoi(arg2)
-				if err != nil {
-					log.Fatal(err)
-				}
-				randStr := randomstring.GenRandStr(labc, inputLenStr)
-				fmt.Println(randStr)
-			}
+			selectInput(labc)
 		case "-nl", "-ln":
-			if len(os.Args) == 2 {
-				randStr := randomstring.GenRandStr(nums+labc, 32)
-				fmt.Println(randStr)
-			} else {
-				arg2 := os.Args[2]
-				inputLenStr, err := strconv.Atoi(arg2)
-				if err != nil {
-					log.Fatal(err)
-				}
-				randStr := randomstring.GenRandStr(nums+labc, inputLenStr)
-				fmt.Println(randStr)
-			}
+			selectInput(nums+labc)
 		case "-u":
-			if len(os.Args) == 2 {
-				randStr := randomstring.GenRandStr(uABC, 32)
-				fmt.Println(randStr)
-			} else {
-				arg2 := os.Args[2]
-				inputLenStr, err := strconv.Atoi(arg2)
-				if err != nil {
-					log.Fatal(err)
-				}
-				randStr := randomstring.GenRandStr(uABC, inputLenStr)
-				fmt.Println(randStr)
-			}
+			selectInput(uABC)
 		case "-nu", "-un":
-			if len(os.Args) == 2 {
-				randStr := randomstring.GenRandStr(nums+uABC, 32)
-				fmt.Println(randStr)
-			} else {
-				arg2 := os.Args[2]
-				inputLenStr, err := strconv.Atoi(arg2)
-				if err != nil {
-					log.Fatal(err)
-				}
-				randStr := randomstring.GenRandStr(nums+uABC, inputLenStr)
-				fmt.Println(randStr)
-			}
+			selectInput(nums+uABC)
 		case "-lu", "-ul":
-			if len(os.Args) == 2 {
-				randStr := randomstring.GenRandStr(labc+uABC, 32)
-				fmt.Println(randStr)
-			} else {
-				arg2 := os.Args[2]
-				inputLenStr, err := strconv.Atoi(arg2)
-				if err != nil {
-					log.Fatal(err)
-				}
-				randStr := randomstring.GenRandStr(labc+uABC, inputLenStr)
-				fmt.Println(randStr)
-			}
+			selectInput(labc+uABC)
 		default:
 			inputLenStr, err := strconv.Atoi(arg)
 			if err != nil {
