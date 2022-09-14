@@ -44,6 +44,10 @@ func usage() {
 
         $ randstr -nl 35
         hs9wsuhr6m2dyez2zdfyxduglsccygtyzaq
+
+        **Warning**
+        On most GNU/Linux file systems, filenames can be up to 255 characters long,
+        this is the most portable character set [-._A-Za-z]
 `
 
 	fmt.Println(usage)
