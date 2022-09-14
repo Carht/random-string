@@ -58,6 +58,10 @@ randstr [Argument]
     hs9wsuhr6m2dyez2zdfyxduglsccygtyzaq
 ```
 
+## **Warning**                                                                                                                             
+        On most GNU/Linux file systems, filenames can be up to 255 characters long, 
+		this is the most portable character set [-._A-Za-z0-9] 
+
 ## Version
 
 If you use the argument **-v** or **version** return this:

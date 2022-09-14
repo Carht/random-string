@@ -47,7 +47,7 @@ func usage() {
 
         **Warning**
         On most GNU/Linux file systems, filenames can be up to 255 characters long,
-        this is the most portable character set [-._A-Za-z]
+        this is the most portable character set [-._A-Za-z0-9]
 `
 
 	fmt.Println(usage)
