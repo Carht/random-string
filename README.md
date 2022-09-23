@@ -13,7 +13,19 @@ GAPkKnVFRICHskSCDxeTFTknIIsQBbdd
 
 Cases:
 
+* Default (length of this string: 32 letters, upper and lowercases):
+
 ```bash
+./randstr
+UDckrRnCvURNRuKvNWziyRIBxREtjaEQ
+```
+
+* Another cases:
+
+```bash
+./randstr -lu 35
+WIMVngPABZGiBHcCuhmDLTVcoBAHrdJJUGH
+
 ./randstr -l 35
 sgjxwcoqnkkqogzotoigozvyjdmzsegixul
 
