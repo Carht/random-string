@@ -21,6 +21,7 @@ func main() {
 	retUpLetters := flag.Int("u", 0, "Return a string of uppercase letters.")
 	retLowAndNums := flag.Int("nl", 0, "Return a string of lowercase letters with numbers.")
 	retUpAndNums := flag.Int("nu", 0, "Return a string of uppercase letters with numbers.")
+	retUpAndLow := flag.Int("lu", 0, "Return a string of uppercase with lowercase letters.")
 	versn := flag.Bool("v", false, "Return the version.")
 
 	flag.Parse()
@@ -38,6 +39,8 @@ func main() {
 		fmt.Println(randomstring.GenRandStr(nums+labc, *retLowAndNums))
 	case *retUpAndNums != 0:
 		fmt.Println(randomstring.GenRandStr(nums+uABC, *retUpAndNums))
+	case *retUpAndLow != 0:
+		fmt.Println(randomstring.GenRandStr(labc+uABC, *retUpAndLow))
 	default:
 		fmt.Println(randomstring.GenRandStr(labc+uABC, 32))
 	}
