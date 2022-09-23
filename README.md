@@ -7,55 +7,30 @@ Return a string of 32 characters.
 
 ```bash
 ./randstr
-zEbNgSn1oOed7HsuzL2cl4TjPXv20mI3
+GAPkKnVFRICHskSCDxeTFTknIIsQBbdd
 ```
 
 
-Return a string using the input number
+Cases:
 
 ```bash
-./randstr 22
-OWrslUCVNBFlylp4StQOxa
+./randstr -l 35
+sgjxwcoqnkkqogzotoigozvyjdmzsegixul
 
-./randstr 50
-3zlmiyPmueMIi306FY2sEAHAfJVgFPOsVq69V6FSLosLsDQAYk
-```
+./randstr -u 35
+IBZDSTKGTFQSUWIICQSOTUBBNYISCIAWOYC
 
-## Help
+./randstr -nl 30
+en8usol16pe8e6fhwy5c8xz7d5v9sr
 
-If you use the argument **-h** or **help** return this:
+./randstr -nu 32
+DYCA7VFE1AURUI66PZGISG7IHQ8707HX
 
-```
-randstr [Argument]
-                 
-    -h or help    : Return this help.
-    -v or version : Return the version. 
-    -n            : Return numbers.
-    -l            : Return lowercase letters.
-    -u            : Return uppercase letters.
-    -nl or -ln    : Return lowercase letters with numbers.
-    -un or -nu    : Return uppercase letters with numbers.
-    -ul or -lu    : Return uppercase letters with lowercase letters.
-    default       : Return a string of 32 characters between uppercases, lowercases and numbers.
-    
-    Note: All previous parameters can use a number for the output length.
-        
-    Some examples:
-        
-    $ randstr
-    cDUKhgpkuIgMdqs3JibEjJoyBiBjgjZi
-        
-    $ randstr 35
-    ghrzAtgElMIMxCRFMFCbUCnwiDuEkejKocQ
-        
-    $ randstr -n
-    54770780734477138272862081928945
-     
-    $ randstr -n 33
-    280309865114201905814323059174146
-        
-    $ randstr -nl 35
-    hs9wsuhr6m2dyez2zdfyxduglsccygtyzaq
+./randstr -n 20
+46495882363454181740
+
+./randstr -v
+0.1.3
 ```
 
 ## **Warning**                                                                                                                             
@@ -68,7 +43,7 @@ If you use the argument **-v** or **version** return this:
 
 ```bash
 ./randstr -v
-0.1.2
+0.1.3
 ```
 
 # Usage example
@@ -76,7 +51,7 @@ If you use the argument **-v** or **version** return this:
 ```bash
 mkdir $(randstr -l 27)
 cp /home/user/file.xyz /home/user/$(randstr -u 45)
-mv /home/user/file.xyz $(randstr -l)
+mv /home/user/file.xyz $(randstr -l 17)
 ```
 
 # License
